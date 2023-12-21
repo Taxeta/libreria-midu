@@ -1,7 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import { booksReducer } from "./books/booksSlice";
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  booksState: booksReducer,
+});
 
 export const setupStore = () => {
   return configureStore({
