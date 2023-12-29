@@ -1,0 +1,7 @@
+.section-title {
+  font-family: var(--primary-font);
+  font-size: 38px;
+  text-align: center;
+  padding: 10px;
+  background-color: #96858f;
+}

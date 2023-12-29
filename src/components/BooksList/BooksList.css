@@ -1,0 +1,6 @@
+.content-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #d5d5d5;
+}
