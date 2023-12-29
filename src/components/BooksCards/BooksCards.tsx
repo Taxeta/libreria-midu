@@ -24,7 +24,7 @@ const BooksCards = ({
         />
         <div className="card__especifies">
           <span>{author?.name}</span>
-          <span>{author?.otherBooks}</span>
+          <span>{author?.otherBooks.join(`, `)}</span>
           <span>{genre}</span>
           <span>{year}</span>
           <span>Pages: {pages}</span>

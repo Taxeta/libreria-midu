@@ -2,5 +2,18 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+}
+
+.search-book--input {
+  border: none;
+  border-radius: 25px;
+  padding: 6px;
+  font-family: var(--secondary-font);
+  margin: 10px;
+  font-size: 15px;
+}
+
+.container-list {
   background-color: #d5d5d5;
+  min-height: 100vh;
 }
