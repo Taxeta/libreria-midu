@@ -1,0 +1,10 @@
+.list-container {
+  background-color: #6d7993c0;
+}
+
+.list__title {
+  text-align: center;
+  padding: 15px;
+  font-size: 22px;
+  color: #d5d5d5;
+}

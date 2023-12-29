@@ -3,6 +3,7 @@ import useLibraryApi from "../../hooks/useLibraryApi";
 import { useAppDispatch } from "../../store";
 import { loadBooksActionCreator } from "../../store/books/booksSlice";
 import BooksList from "../../components/BooksList/BooksList";
+import "./LibraryPage.css";
 
 const LibraryPage = (): React.ReactElement => {
   const { getBooks } = useLibraryApi();
@@ -18,8 +19,8 @@ const LibraryPage = (): React.ReactElement => {
   }, [loadLibraryPage]);
 
   return (
-    <section>
-      <h2>List of Books</h2>
+    <section className="list-container">
+      <h2 className="list__title">List of Books</h2>
       {<BooksList />}
     </section>
   );
