@@ -11,10 +11,8 @@ export interface ApiBook {
   synopsis: string;
   year: number;
   ISBN: string;
-  author: Author;
-}
-
-export interface Author {
-  name: string;
-  otherBooks: string[];
+  author: {
+    name: string;
+    otherBooks: string[];
+  };
 }

@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { BooksState } from "../types";
-import { LibraryItem } from "../../types";
+import { BooksState } from "../types.ts";
+import { ApiBook } from "../../types.ts";
 
 const initialBooksState: BooksState = {
   library: [],
@@ -12,17 +12,13 @@ const booksSlice = createSlice({
   reducers: {
     loadBooks: (
       currentBooksState,
-      action: PayloadAction<LibraryItem[]>,
+      action: PayloadAction<{ book: ApiBook }[]>,
     ): BooksState => {
-      const unitBook = action.payload.filter((book) => {
-        return !currentBooksState.library.some(
-          (hasBook) => hasBook.book.id === book.book.id,
-        );
-      });
+      const newBooks = action.payload.map((libraryItem) => libraryItem.book);
 
       return {
         ...currentBooksState,
-        library: [...currentBooksState.library, ...unitBook],
+        library: [...currentBooksState.library, ...newBooks],
       };
     },
   },

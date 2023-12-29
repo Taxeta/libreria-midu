@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { LibraryItem } from "../types";
+import { LibraryItem } from "../types.ts";
 
 interface LibraryApi {
   getBooks: () => Promise<LibraryItem[]>;
@@ -14,7 +14,7 @@ const useLibraryApi = (): LibraryApi => {
 
       const data = await response.json();
 
-      return data;
+      return data.library;
     } catch {
       throw new Error("Can't get any book");
     }

@@ -1,5 +1,5 @@
-import { LibraryItem } from "../types";
+import { ApiBook } from "../types";
 
 export interface BooksState {
-  library: LibraryItem[];
+  library: ApiBook[];
 }
