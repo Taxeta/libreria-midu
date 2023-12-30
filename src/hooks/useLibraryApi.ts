@@ -6,9 +6,9 @@ interface LibraryApi {
 }
 
 const useLibraryApi = (): LibraryApi => {
-  const apiUrl = `${
-    import.meta.env.VITE_API_PUBLIC_URL
-  }/public/data/books.json`;
+  const apiUrl = import.meta.env.VITE_API_PUBLIC_URL
+    ? `${import.meta.env.VITE_API_PUBLIC_URL}/data/books.json`
+    : "/data/books.json";
 
   const getBooks = useCallback(async () => {
     try {
