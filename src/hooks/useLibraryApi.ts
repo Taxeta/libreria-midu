@@ -6,7 +6,7 @@ interface LibraryApi {
 }
 
 const useLibraryApi = (): LibraryApi => {
-  const apiUrl = "/data/books.json";
+  const apiUrl = "../public/data/books.json";
 
   const getBooks = useCallback(async () => {
     try {
