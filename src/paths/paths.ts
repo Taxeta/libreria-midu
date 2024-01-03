@@ -2,9 +2,9 @@ import { PathsStructure } from "./types";
 
 const paths: PathsStructure = {
   root: "/",
-  home: "/home",
-  contact: "/contact",
-  readingList: "/reading-list",
+  home: "/inicio",
+  contact: "/contacto",
+  readingList: "/lista-lectura",
 };
 
 export default paths;

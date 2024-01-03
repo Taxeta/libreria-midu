@@ -28,7 +28,7 @@ const BooksList = (): React.ReactElement => {
         type="text"
         value={searchBook}
         onChange={handleSearchChange}
-        placeholder="Search book..."
+        placeholder="Busca un libro..."
         className="search-book--input"
       />
       <ul className="content-list">

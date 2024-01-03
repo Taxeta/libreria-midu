@@ -20,7 +20,7 @@ const LibraryPage = (): React.ReactElement => {
 
   return (
     <section className="list-container">
-      <h2 className="list__title">List of Books</h2>
+      <h2 className="list__title">Lista de libros</h2>
       {<BooksList />}
     </section>
   );

@@ -1,5 +1,11 @@
+import { useDispatch, useSelector } from "react-redux";
 import { ApiBook } from "../../types";
 import "./BooksCards.css";
+import { RootState } from "../../store/index";
+import {
+  addBookPendingListActionCreator,
+  removeBookPendingListActionCreator,
+} from "../../store/ui/ui";
 
 interface BooksCardsProps {
   book: Partial<ApiBook>;
@@ -8,6 +14,20 @@ interface BooksCardsProps {
 const BooksCards = ({
   book: { id, genre, pages, ISBN, synopsis, title, year, cover, author },
 }: BooksCardsProps): React.ReactElement => {
+  const dispatch = useDispatch();
+
+  const isBookPendingList = useSelector((state: RootState) =>
+    state.uiState.pendingBooks.includes(id!),
+  );
+
+  const handleAddPending = () => {
+    dispatch(addBookPendingListActionCreator(id!));
+  };
+
+  const handleRemovePending = () => {
+    dispatch(removeBookPendingListActionCreator(id!));
+  };
+
   return (
     <article className="card-content">
       <div className="card__title">
@@ -29,7 +49,15 @@ const BooksCards = ({
           <span>{year}</span>
           <span>Pages: {pages}</span>
           <span>BookId: {ISBN}</span>
-          <button className="solid-button">Añadir lista lectura</button>
+          {isBookPendingList ? (
+            <button className="solid-button" onClick={handleRemovePending}>
+              Quitar lista lectura
+            </button>
+          ) : (
+            <button className="solid-button" onClick={handleAddPending}>
+              Añadir lista lectura
+            </button>
+          )}
         </div>
       </div>
       <span className="card__description">{synopsis}</span>
