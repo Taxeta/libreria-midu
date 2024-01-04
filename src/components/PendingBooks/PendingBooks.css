@@ -19,7 +19,8 @@
 }
 
 .book__title {
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
+  font-weight: bold;
 }
 
 .books-container {
@@ -31,4 +32,19 @@
 
 .book__image {
   border: 2px solid white;
+}
+
+.book__author {
+  font-family: var(--primary-font);
+}
+
+.book__info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.book__id {
+  font-size: 18px;
+  padding: 0 5px 0 0;
 }

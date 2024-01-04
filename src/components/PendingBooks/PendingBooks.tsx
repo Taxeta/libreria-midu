@@ -27,9 +27,11 @@ const PendingBooks = (): React.ReactElement => {
       <ul className="books-data">
         {filteredBooks.map((book) => (
           <li className="books-container" key={book?.id}>
-            <span>#{book?.id}</span>
-            <span className="book__title">{book?.title}</span>
-            <span>{book?.author?.name}</span>
+            <span className="book__id">#{book?.id}</span>
+            <div className="book__info">
+              <span className="book__title">{book?.title}</span>
+              <span className="book__author">{book?.author?.name}</span>
+            </div>
             <img
               className="book__image"
               src={book?.cover}
