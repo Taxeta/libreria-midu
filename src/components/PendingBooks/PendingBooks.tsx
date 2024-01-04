@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
+import { useEffect } from "react";
 
 const PendingBooks = (): React.ReactElement => {
   const pendingBooks = useSelector(
@@ -13,6 +14,11 @@ const PendingBooks = (): React.ReactElement => {
   });
 
   const booksToRead = filteredBooks.length;
+
+  useEffect(() => {
+    const pendingBooksId = JSON.stringify(pendingBooks);
+    sessionStorage.setItem("pendingBooks", pendingBooksId);
+  }, [pendingBooks]);
 
   return (
     <section>

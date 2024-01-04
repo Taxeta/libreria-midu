@@ -21,6 +21,9 @@ const uiSlice = createSlice({
         (id) => id !== action.payload,
       );
     },
+    setPendingBooks: (state, action: PayloadAction<string[]>) => {
+      state.pendingBooks = action.payload;
+    },
   },
 });
 
@@ -29,4 +32,5 @@ export const {
   setSearchText: setSearchTextActionCreator,
   addBookPendingList: addBookPendingListActionCreator,
   removeBookPendingList: removeBookPendingListActionCreator,
+  setPendingBooks: setPendingBooksActionCreator,
 } = uiSlice.actions;
