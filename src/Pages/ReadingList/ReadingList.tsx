@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import PendingBooks from "../../components/PendingBooks/PendingBooks";
 import { useEffect } from "react";
 import { setPendingBooksActionCreator } from "../../store/ui/ui";
+import "./ReadingList.css";
 
 const ReadingList = (): React.ReactElement => {
   const dispatch = useDispatch();
@@ -15,8 +16,8 @@ const ReadingList = (): React.ReactElement => {
   }, [dispatch]);
 
   return (
-    <section>
-      <h2>Tú lista de lectura</h2>
+    <section className="reading-list">
+      <h2 className="list__title">Tú lista de lectura</h2>
       <PendingBooks />
     </section>
   );

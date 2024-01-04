@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { useEffect } from "react";
+import "./PendingBooks.css";
 
 const PendingBooks = (): React.ReactElement => {
   const pendingBooks = useSelector(
@@ -21,15 +22,21 @@ const PendingBooks = (): React.ReactElement => {
   }, [pendingBooks]);
 
   return (
-    <section>
-      <span>Libros por leer: {booksToRead}</span>
-      <ul>
+    <section className="pending-book">
+      <span className="book-counter">Libros por leer: {booksToRead}</span>
+      <ul className="books-data">
         {filteredBooks.map((book) => (
-          <li key={book?.id}>
-            <span>{book?.id}</span>
-            <span>{book?.title}</span>
+          <li className="books-container" key={book?.id}>
+            <span>#{book?.id}</span>
+            <span className="book__title">{book?.title}</span>
             <span>{book?.author?.name}</span>
-            <img src={book?.cover} alt={book?.title} width="30%" height="30%" />
+            <img
+              className="book__image"
+              src={book?.cover}
+              alt={book?.title}
+              width="30%"
+              height="30%"
+            />
           </li>
         ))}
       </ul>
