@@ -1,0 +1,34 @@
+.pending-book {
+  background-color: #d5d5d5;
+  padding: 10px;
+  padding-bottom: 100px;
+}
+
+.book-counter {
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 0 15px 0;
+}
+
+.books-data {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.book__title {
+  font-family: var(--primary-font);
+}
+
+.books-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.book__image {
+  border: 2px solid white;
+}

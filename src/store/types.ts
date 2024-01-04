@@ -6,4 +6,5 @@ export interface BooksState {
 
 export interface UiState {
   searchText: string;
+  pendingBooks: string[];
 }

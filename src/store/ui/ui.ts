@@ -3,6 +3,7 @@ import { UiState } from "../types";
 
 const initialUiState: UiState = {
   searchText: "",
+  pendingBooks: [],
 };
 
 const uiSlice = createSlice({
@@ -12,8 +13,24 @@ const uiSlice = createSlice({
     setSearchText: (currentUiState: UiState, action: PayloadAction<string>) => {
       currentUiState.searchText = action.payload;
     },
+    addBookPendingList: (state, action: PayloadAction<string>) => {
+      state.pendingBooks.push(action.payload);
+    },
+    removeBookPendingList: (state, action: PayloadAction<string>) => {
+      state.pendingBooks = state.pendingBooks.filter(
+        (id) => id !== action.payload,
+      );
+    },
+    setPendingBooks: (state, action: PayloadAction<string[]>) => {
+      state.pendingBooks = action.payload;
+    },
   },
 });
 
 export const uiReducer = uiSlice.reducer;
-export const { setSearchText: setSearchTextActionCreator } = uiSlice.actions;
+export const {
+  setSearchText: setSearchTextActionCreator,
+  addBookPendingList: addBookPendingListActionCreator,
+  removeBookPendingList: removeBookPendingListActionCreator,
+  setPendingBooks: setPendingBooksActionCreator,
+} = uiSlice.actions;

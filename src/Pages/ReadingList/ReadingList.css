@@ -1,0 +1,8 @@
+.reading-list {
+  background-color: #6d7993c0;
+  height: 100vh;
+}
+
+.list__title {
+  font-family: var(--secondary-font);
+}
