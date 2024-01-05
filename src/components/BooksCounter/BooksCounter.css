@@ -1,0 +1,23 @@
+.counter-books {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  cursor: pointer;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1;
+  overflow: scroll;
+  border: 1px solid #6d7993c0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  margin-bottom: 70px;
+  justify-content: center;
+  background-color: #96858fcf;
+}
+
+.counter-image {
+  width: 28px;
+  height: 28px;
+}
