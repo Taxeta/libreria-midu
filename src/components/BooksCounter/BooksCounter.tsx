@@ -13,7 +13,7 @@ const BooksCounter = (): React.ReactElement => {
   const books = useSelector((state: RootState) => state.booksState.library);
 
   const filteredBooks = pendingBooks.map((id) => {
-    const bookDetails = books.find((book) => book.id === id);
+    const bookDetails = books.find((book: { id: string }) => book.id === id);
     return bookDetails;
   });
 

@@ -3,6 +3,7 @@ import { useAppSelector } from "../../store";
 import BooksCards from "../BooksCards/BooksCards";
 import "./BooksList.css";
 import { setSearchTextActionCreator } from "../../store/ui/ui";
+import { ApiBook } from "../../types";
 
 const BooksList = (): React.ReactElement => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const BooksList = (): React.ReactElement => {
   };
 
   const filterBooks = searchBook
-    ? libraries.filter((library) =>
+    ? libraries.filter((library: { title: string }) =>
         library.title.toLowerCase().includes(searchBook),
       )
     : libraries;
@@ -32,11 +33,11 @@ const BooksList = (): React.ReactElement => {
         className="search-book--input"
       />
       <ul className="content-list">
-        {filterBooks.map((library) => {
-          if (bookRepeatedId.has(library.id)) {
+        {filterBooks.map((library: Partial<ApiBook>) => {
+          if (bookRepeatedId.has(library.id!)) {
             return null;
           }
-          bookRepeatedId.add(library.id);
+          bookRepeatedId.add(library.id!);
           return (
             <li className="book-content" key={library.id}>
               <BooksCards book={library} />
