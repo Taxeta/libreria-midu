@@ -1,6 +1,7 @@
 {
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/public/data/books.json", "dest": "/public/data/books.json" }
+    { "src": "/public/data/books.json", "dest": "/public/data/books.json" },
+    { "src": "/.*", "dest": "/index.html", "status": 200 }
   ]
 }
