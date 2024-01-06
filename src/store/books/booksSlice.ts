@@ -6,9 +6,14 @@ const initialBooksState: BooksState = {
   library: [],
 };
 
+const storedBooksState = localStorage.getItem("booksState");
+const proloadBooksState = storedBooksState
+  ? JSON.parse(storedBooksState)
+  : initialBooksState;
+
 const booksSlice = createSlice({
   name: "library",
-  initialState: initialBooksState,
+  initialState: proloadBooksState,
   reducers: {
     loadBooks: (
       currentBooksState,
@@ -16,10 +21,13 @@ const booksSlice = createSlice({
     ): BooksState => {
       const newBooks = action.payload.map((libraryItem) => libraryItem.book);
 
-      return {
+      const updatedBooksState = {
         ...currentBooksState,
         library: [...currentBooksState.library, ...newBooks],
       };
+      localStorage.setItem("booksState", JSON.stringify(updatedBooksState));
+
+      return updatedBooksState;
     },
   },
 });

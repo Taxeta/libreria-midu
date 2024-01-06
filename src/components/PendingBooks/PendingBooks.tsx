@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
-import { useEffect } from "react";
 import "./PendingBooks.css";
 
 const PendingBooks = (): React.ReactElement => {
@@ -10,16 +9,11 @@ const PendingBooks = (): React.ReactElement => {
   const books = useSelector((state: RootState) => state.booksState.library);
 
   const filteredBooks = pendingBooks.map((id) => {
-    const bookDetails = books.find((book) => book.id === id);
+    const bookDetails = books.find((book: { id: string }) => book.id === id);
     return bookDetails;
   });
 
   const booksToRead = filteredBooks.length;
-
-  useEffect(() => {
-    const pendingBooksId = JSON.stringify(pendingBooks);
-    sessionStorage.setItem("pendingBooks", pendingBooksId);
-  }, [pendingBooks]);
 
   return (
     <section className="pending-book">
