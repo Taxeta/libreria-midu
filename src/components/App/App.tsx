@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "../../Pages/HomePage/HomePage";
 import LibraryPage from "../../Pages/LibraryPage/LibraryPage";
 import MobileNavigationBar from "../MobileNavigationBar/MobileNavigationBar";
@@ -13,6 +13,7 @@ const App = (): React.ReactElement => {
       <HomePage />
       <BooksCounter />
       <Routes>
+        <Route path="/*" element={<Navigate to={paths.home} />} />
         <Route path={paths.root} element={<LibraryPage />} />
         <Route path={paths.home} element={<LibraryPage />} />
         <Route path={paths.readingList} element={<ReadingList />} />
