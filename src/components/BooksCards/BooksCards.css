@@ -46,6 +46,7 @@
   font-size: 18px;
   padding: 15px 0;
   border-bottom: 2px solid black;
+  display: block;
 }
 
 .solid-button {
@@ -54,4 +55,99 @@
   padding: 5px;
   color: white;
   background-color: #6d7993c0;
+}
+
+@media screen and (min-width: 760px) {
+  .card-content {
+    height: 500px;
+    width: 180px;
+    padding: 15px;
+  }
+
+  .card__description {
+    position: absolute;
+    font-family: var(--secondary-font);
+    margin-top: 280px;
+    font-size: 18px;
+    border-bottom: none;
+    background-color: #6d7993;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #96858f;
+    width: 200px;
+    color: rgb(239, 231, 231);
+  }
+
+  .large-screen-only .card__description {
+    display: none;
+  }
+
+  .large-screen-only:hover .card__description {
+    display: block;
+  }
+
+  .card__data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--secondary-font);
+    font-size: 16px;
+  }
+
+  .card__image {
+    border: 1px solid black;
+    margin: 5px;
+  }
+
+  .card__align-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .card__especifies {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .solid-button {
+    padding: 10px;
+    width: 120px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-content {
+    height: 420px;
+    width: 320px;
+    padding: 15px;
+  }
+
+  .card__description {
+    margin-top: 250px;
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card-content {
+    height: 520px;
+    width: 400px;
+    padding: 15px;
+  }
+
+  .card__description {
+    margin-top: 400px;
+    width: 400px;
+  }
+
+  .card__image {
+    border: 1px solid black;
+    margin: 5px;
+    width: 960px;
+    height: 350px;
+  }
 }

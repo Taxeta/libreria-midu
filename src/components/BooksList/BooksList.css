@@ -18,3 +18,27 @@
   background-color: #d5d5d5;
   min-height: 100vh;
 }
+
+@media screen and (min-width: 760px) {
+  .container-list {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15px;
+    margin-bottom: 200px;
+    width: 100%;
+    align-items: start;
+  }
+
+  .search-book--input {
+    padding: 10px;
+    text-align: center;
+    max-width: 100%;
+  }
+}
