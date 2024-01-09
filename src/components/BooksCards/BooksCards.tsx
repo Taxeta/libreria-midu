@@ -47,14 +47,15 @@ const BooksCards = ({
                 width="300px"
                 height="100%"
               />
+              <span>{author?.name}</span>
               <span>{genre}</span>
               <span>{year}</span>
-              <span>ID: {ISBN}</span>
+
               <p className="card__description">{synopsis}</p>
             </div>
             <div className="card__especifies">
-              <span>{author?.name}</span>
               <span>Libros: {author?.otherBooks.join(`, `)}</span>
+              <span>ID: {ISBN}</span>
               <span>Paginas: {pages}</span>
               {isBookPendingList ? (
                 <button className="solid-button" onClick={handleRemovePending}>
