@@ -6,8 +6,11 @@ import paths from "../../paths/paths";
 import ReadingList from "../../Pages/ReadingList/ReadingList";
 import ContactPage from "../../Pages/ContactPage/ContactPage";
 import BooksCounter from "../BooksCounter/BooksCounter";
+import Footer from "../Footer/Footer";
 
 const App = (): React.ReactElement => {
+  const isLargeScreen = window.innerWidth >= 760;
+
   return (
     <main>
       <HomePage />
@@ -19,7 +22,7 @@ const App = (): React.ReactElement => {
         <Route path={paths.readingList} element={<ReadingList />} />
         <Route path={paths.contact} element={<ContactPage />} />
       </Routes>
-      <MobileNavigationBar />
+      {isLargeScreen ? <Footer /> : <MobileNavigationBar />}
     </main>
   );
 };

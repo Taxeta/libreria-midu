@@ -1,0 +1,19 @@
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #96858f;
+  padding: 25px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #b6b1b1;
+}
+
+.footer__legal {
+  color: white;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}

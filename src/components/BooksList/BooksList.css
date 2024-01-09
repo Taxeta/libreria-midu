@@ -31,7 +31,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 15px;
-    margin-bottom: 200px;
+    margin-bottom: 30px;
     width: 100%;
     align-items: start;
   }
