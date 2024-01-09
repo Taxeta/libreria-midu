@@ -1,0 +1,29 @@
+.data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #d5d5d5;
+  height: 100vh;
+  font-family: var(--secondary-font);
+  margin-bottom: 50px;
+}
+
+.data__title {
+  padding: 15px;
+  font-size: 24px;
+  background-color: #6d7993c0;
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid #51454c;
+  border-bottom: 2px solid #b6b1b1;
+}
+
+.data__company-name {
+  font-family: var(--primary-font);
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 10px;
+  border-bottom: 2px solid black;
+}

@@ -8,3 +8,7 @@ export interface UiState {
   searchText: string;
   pendingBooks: string[];
 }
+
+export interface apiMapState {
+  isApiLoaded: boolean;
+}
