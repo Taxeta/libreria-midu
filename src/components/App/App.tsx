@@ -7,6 +7,7 @@ import ReadingList from "../../Pages/ReadingList/ReadingList";
 import ContactPage from "../../Pages/ContactPage/ContactPage";
 import BooksCounter from "../BooksCounter/BooksCounter";
 import Footer from "../Footer/Footer";
+import WebNavigationBar from "../WebNavigationBar/WebNavigationBar";
 
 const App = (): React.ReactElement => {
   const isLargeScreen = window.innerWidth >= 760;
@@ -14,6 +15,7 @@ const App = (): React.ReactElement => {
   return (
     <main>
       <HomePage />
+      {isLargeScreen ? <WebNavigationBar /> : null}
       <BooksCounter />
       <Routes>
         <Route path="/*" element={<Navigate to={paths.home} />} />

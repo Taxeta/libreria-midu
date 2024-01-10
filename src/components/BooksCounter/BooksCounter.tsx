@@ -18,6 +18,7 @@ const BooksCounter = (): React.ReactElement => {
   });
 
   const booksToRead = filteredBooks.length;
+
   return (
     <section className="counter-books">
       <NavLink to={paths.readingList} onClick={scrollToTop}>

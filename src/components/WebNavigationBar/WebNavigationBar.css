@@ -1,0 +1,37 @@
+.webnav-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  overflow: scroll;
+  cursor: pointer;
+  left: 15px;
+  top: 5px;
+  overflow: hidden;
+}
+
+.webnav__menu {
+  position: fixed;
+  background-color: #96858fcf;
+  border-radius: 30%;
+  padding: 10px;
+}
+
+.webnav__list {
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  padding: 25px;
+  margin: 65px 25px 25px 0;
+  border-radius: 25px;
+  background-color: #6d7993c0;
+  width: 90vh;
+  height: 80vh;
+  gap: 25px;
+  color: var(--white);
+  font-family: var(--secondary-font);
+}
+
+.webnav__list-item:hover {
+  color: rgb(187, 165, 165);
+}

@@ -64,10 +64,20 @@
     padding: 15px;
   }
 
+  .card__title {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    gap: 15px;
+    align-items: flex-start;
+    font-family: var(--primary-font);
+    color: #96858f;
+  }
+
   .card__description {
     position: absolute;
     font-family: var(--secondary-font);
-    margin-top: 280px;
+    margin-top: 250px;
     font-size: 18px;
     border-bottom: none;
     background-color: #6d7993;
