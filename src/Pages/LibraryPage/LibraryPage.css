@@ -15,4 +15,8 @@
   .list-container {
     width: 100%;
   }
+
+  .list__title {
+    font-size: 28px;
+  }
 }
