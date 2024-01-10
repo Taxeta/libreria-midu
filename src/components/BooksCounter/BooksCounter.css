@@ -15,9 +15,25 @@
   margin-bottom: 70px;
   justify-content: center;
   background-color: #96858fcf;
+  overflow: hidden;
 }
 
 .counter-image {
   width: 28px;
   height: 28px;
+}
+
+@media screen and (min-width: 760px) {
+  .counter-books {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 90px;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .counter-image {
+    width: 48px;
+    height: 48px;
+  }
 }
