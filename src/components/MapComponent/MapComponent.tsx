@@ -21,6 +21,11 @@ const MapComponent: React.FC<MapComponentProps> = ({ apiKey }) => {
     height: "40%",
   };
 
+  const containerStyleLarge = {
+    width: "35%",
+    height: "100%",
+  };
+
   const center = {
     lat: 41.413722,
     lng: 2.025306,
@@ -32,13 +37,17 @@ const MapComponent: React.FC<MapComponentProps> = ({ apiKey }) => {
     }
   }, [dispatch, isApiLoaded]);
 
+  const isLargeScreen = window.innerWidth >= 760;
+
   return (
     <>
       <LoadScript googleMapsApiKey={apiKey} libraries={["places"]}>
         {isApiLoaded && (
           <GoogleMap
             mapContainerClassName="map-container"
-            mapContainerStyle={containerStyle}
+            mapContainerStyle={
+              isLargeScreen ? containerStyleLarge : containerStyle
+            }
             center={center}
             zoom={16}
           >

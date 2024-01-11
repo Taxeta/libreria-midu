@@ -35,7 +35,10 @@ const BooksCards = ({
       {isLargeScreen ? (
         <>
           <div className="card__title">
-            <span className="card__number">#{id}</span>
+            <span className="card__number">
+              <strong>#</strong>
+              {id}
+            </span>
             <h2 className="card__book-title">{title}</h2>
           </div>
           <div className="card__data">
@@ -54,9 +57,16 @@ const BooksCards = ({
               <p className="card__description">{synopsis}</p>
             </div>
             <div className="card__especifies">
-              <span>Libros: {author?.otherBooks.join(`, `)}</span>
-              <span>ID: {ISBN}</span>
-              <span>Paginas: {pages}</span>
+              <span>
+                <strong>Libros:</strong> {author?.otherBooks.join(`, `)}
+              </span>
+              <span>
+                <strong>ID:</strong> {ISBN}
+              </span>
+              <span>
+                <strong>Paginas:</strong>
+                {pages}
+              </span>
               {isBookPendingList ? (
                 <button className="solid-button" onClick={handleRemovePending}>
                   Quitar lista lectura

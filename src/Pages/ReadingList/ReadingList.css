@@ -1,8 +1,14 @@
 .reading-list {
   background-color: #6d7993c0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .list__title {
   font-family: var(--secondary-font);
+}
+
+@media screen and (min-width: 760px) {
+  .list__title {
+    font-size: 28px;
+  }
 }
