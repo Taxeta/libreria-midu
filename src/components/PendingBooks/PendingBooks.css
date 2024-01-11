@@ -62,12 +62,12 @@
   }
 
   .book__image {
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
   }
 
   .book-counter {
-    font-size: 36px;
+    font-size: 32px;
     padding: 15px;
   }
 
