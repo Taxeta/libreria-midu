@@ -3,6 +3,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { booksReducer } from "./books/booksSlice";
 import { uiReducer } from "./ui/ui";
 import { mapReducer } from "./mapSlice/mapSlice";
+import { BooksState } from "./types";
 
 const rootReducer = combineReducers({
   booksState: booksReducer,
@@ -10,9 +11,10 @@ const rootReducer = combineReducers({
   mapState: mapReducer,
 });
 
-export const setupStore = () => {
+export const setupStore = (preloadedState?: { booksState?: BooksState }) => {
   return configureStore({
     reducer: rootReducer,
+    preloadedState,
   });
 };
 
