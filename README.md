@@ -9,3 +9,11 @@ Librería de Midudev. Las funcionalidades básicas que se espera tener son: Ense
 `npm run preview`: runs the built app
 
 `npm run lint`: runs ESLint
+
+## Testing scripts
+
+`test`: vitest run normaly
+`test:dev`: vitest developer mode
+`test:coverage`: vitest coverage stats
+
+`npx cypress open`: Open End-to-End testing

@@ -21,8 +21,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "cypress", "@testing-library/cypress"]
   },
-  "include": ["src"],
+  "include": ["src", "cypress/e2e", "cypress.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
