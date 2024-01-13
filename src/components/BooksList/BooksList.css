@@ -22,7 +22,6 @@
 @media screen and (min-width: 760px) {
   .container-list {
     align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
   }

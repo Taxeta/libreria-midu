@@ -18,8 +18,11 @@ const BooksList = (): React.ReactElement => {
   };
 
   const filterBooks = searchBook
-    ? libraries.filter((library: { title: string }) =>
-        library.title.toLowerCase().includes(searchBook),
+    ? libraries.filter(
+        (library: { title?: string }) =>
+          library &&
+          library.title &&
+          library.title.toLowerCase().includes(searchBook),
       )
     : libraries;
 
