@@ -8,7 +8,7 @@ describe("Given a LibraryPage page", () => {
       const bookTitle2 = "Dune";
       const bookTitle3 = "Neuromante";
       const bookTitle4 = "Drácula";
-      cy.visit("http://localhost:5173/");
+      cy.visit("http://localhost:5173");
 
       cy.contains(bookTitle1)
         .closest("li")
