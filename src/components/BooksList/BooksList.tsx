@@ -33,8 +33,8 @@ const BooksList = (): React.ReactElement => {
         className="search-book--input"
       />
       <ul className="content-list">
-        {filterBooks.map((library: Partial<ApiBook>) => {
-          if (bookRepeatedId.has(library.id!)) {
+        {filterBooks.map((library: Partial<ApiBook> | null) => {
+          if (!library || !library.id || bookRepeatedId.has(library.id)) {
             return null;
           }
           bookRepeatedId.add(library.id!);
